@@ -24,7 +24,7 @@ void NewFileRead(HWND hwnd, textParams * tp, BOOLEAN * err) {
     GetOpenFileName(&ofn);
 
     FileRead(ofn.lpstrFile, tp, err);
-    if(*err) *err = FALSE; //costûl :(
+    if(*err) *err = FALSE; //costÃ»l :(
 }
 
 void FileRead(char * filename, textParams * tp, BOOLEAN * err) {
