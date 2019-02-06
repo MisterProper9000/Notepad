@@ -1,0 +1,31 @@
+#include "menu.h"
+#include <windows.h>
+#include <CommCtrl.h>
+
+MYMENU MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open",                       OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Exit",                       EXIT
+    END
+    POPUP "&Mode"
+    BEGIN
+        MENUITEM "&NormalMode",                  NORMAL_MODE, CHECKED
+        MENUITEM "&WrapMode",                    WRAP_MODE
+    END
+
+END
+
+
+DlgWindow DIALOG 50,50,150,50
+ STYLE WS_OVERLAPPED|WS_CAPTION|WS_BORDER|WS_SYSMENU|WS_VISIBLE
+ CAPTION "Find"
+ FONT 10, "Arial"
+{
+    CONTROL "", ID_STATUS, STATUSCLASSNAME, 0, 0, 0, 0, 0
+    PUSHBUTTON "&FIND NEXT", ID_OK, 10, 30, 50, 10
+    PUSHBUTTON "&CANCEL", ID_CL, 70, 30, 50, 10
+}
+
